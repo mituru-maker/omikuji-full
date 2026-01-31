@@ -23,14 +23,14 @@ async def check_endpoint(name: str = ""):
 async def root():
     return {"message": "FastAPI backend is running"}
 
-@app.get("/omikuji")
-async def omikuji():
+@app.get("/fortune")
+async def fortune():
     fortunes = ["大吉", "中吉", "小吉", "吉", "末吉", "凶"]
     lucky_items = [
         "赤い財布", "緑のペン", "青いネクタイ", "黄色いハンカチ", 
         "白い腕時計", "黒いスマホケース", "紫のキーホルダー", "ピンクの栞"
     ]
-    advices = [
+    messages = [
         "今日は新しいことに挑戦してみましょう",
         "大切な人に連絡を取ってみてください",
         "散歩をして気分転換するのがおすすめです",
@@ -43,12 +43,12 @@ async def omikuji():
     
     selected_fortune = random.choice(fortunes)
     selected_item = random.choice(lucky_items)
-    selected_advice = random.choice(advices)
+    selected_message = random.choice(messages)
     
     return {
         "fortune": selected_fortune,
         "lucky_item": selected_item,
-        "advice": selected_advice
+        "message": selected_message
     }
 
 if __name__ == "__main__":

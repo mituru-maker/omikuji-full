@@ -1,3 +1,6 @@
+// API URL configuration
+const API_URL = "http://localhost:8000/fortune";
+
 document.addEventListener('DOMContentLoaded', function() {
     const omikujiBtn = document.getElementById('omikujiBtn');
     const resultArea = document.getElementById('resultArea');
@@ -9,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showResult('おみくじを引いています...', 'loading');
 
         try {
-            const response = await fetch('https://omikuji-full-app.onrender.com');
+            const response = await fetch(API_URL);
             
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -40,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="result-value">${data.lucky_item}</div>
             </div>
             <div class="result-item">
-                <div class="result-label">💬 一言アドバイス</div>
-                <div class="result-value">${data.advice}</div>
+                <div class="result-label">💬 一言メッセージ</div>
+                <div class="result-value">${data.message}</div>
             </div>
         `;
         
