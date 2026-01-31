@@ -1,5 +1,5 @@
 // API URL configuration
-const API_URL = "http://localhost:8000/fortune";
+const API_URL = "https://omikuji-full-1.onrender.com";
 
 document.addEventListener('DOMContentLoaded', function() {
     const omikujiBtn = document.getElementById('omikujiBtn');
