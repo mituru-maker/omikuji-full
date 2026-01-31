@@ -9,8 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showResult('おみくじを引いています...', 'loading');
 
         try {
-            const response = await fetch('https://omikuji-full-app.onrender.com
-                ');
+            const response = await fetch('https://omikuji-full-app.onrender.com');
             
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
