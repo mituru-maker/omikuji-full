@@ -1,5 +1,5 @@
 // API URL configuration
-const API_URL = "https://omikuji-full-1.onrender.com";
+const API_URL = "https://omikuji-full-1.onrender.com/fortune";
 
 document.addEventListener('DOMContentLoaded', function() {
     const omikujiBtn = document.getElementById('omikujiBtn');
